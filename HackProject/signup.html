@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup-style.css">
+</head>
+<body>
+    <form>
+      <div class="login-page">
+            <div class="login-txt">
+                <div class="div">
+                     <a href="login.html"><img src="icons8-userblue-24.png">Log in</a></div>
+                <div class="login-signup">
+                    <a href="#"><img src="icons8-sign-up-26.png">Sign up</a>
+                </div>
+            </div>
+            <h6>Create Account</h6>
+            <div class="login-input">
+                <div class="separate-input">
+                <div class="input">
+                   <input type="text" required id="name" onkeyup="validationName()" >
+                    <label>Enter your name</label>
+                    <span id="nameerror"></span>
+                </div>
+                </div>
+                <div class="separate-input">
+                <div class="input">
+                   <input type="text" required >
+                   <label>Enter your email</label>
+                   <span id="emailerror"></span>
+                </div>
+            </div>
+                <div class="separate-input">
+                <div class="input">
+                    <input type="text" required >
+                    <label>Set password</label>
+                    <span id="passerror"></span>
+                </div>
+            </div>
+                <div class="separate-input">
+                <div class="input">
+                    <input type="text" required>
+                    <label>Comfirm password</label>
+                    <span id="confirmerror"></span>
+                </div>
+                </div>
+            </div>
+        <div class="login-middle">
+            <div class="login-check">
+                <p>   <input type="checkbox" class="check">      Accepts <span>Terms & Conditions</span></p>
+             </div>
+      
+            
+        </div>
+            
+
+            <div class="login-button">
+                <button>Sign Up</button>
+            </div>
+            <div class="all-error">
+                <span id="fixerror"></span>
+            </div>
+              
+            <!-- <div class="or-with"><p class="with"> Or With </p></div>
+             
+            <div class="google">
+                <div class="google-img"><img src="icons8-google-50.png"></div>
+                <div class="google-txt"><p>Continue with Google</p></div>
+            </div> -->
+      </div>
+
+</body>
+<!-- <script src="script.js"></script> -->
+
+
+
+
+<script>
+     
+var nameerror= document.getElementById("nameerror");
+var emailerror= document.getElementById("emailerror");
+var  passerror= document.getElementById(" passerror");
+var  confirmerror= document.getElementById("confirmerror");
+var  fixerror= document.getElementById("fixerror");
+
+function validationName()
+{
+    var name=document.getElementById("name").value;
+    var namethe=document.getElementById("name");
+
+    if(name.length==0)
+    {
+        nameerror.innerHTML='Name is required !';
+        return false;
+
+    }
+    else if(!name.match(/^[A-za-z]*s{1}[A-za-z]*&/ ))
+    {
+        nameerror.innerHTML='Write a full name';
+        return false;
+    }
+    else
+    nameerror.innerHTML='valid';
+    return true;
+}
+
+
+</script>
+</form>
+
+</html>
